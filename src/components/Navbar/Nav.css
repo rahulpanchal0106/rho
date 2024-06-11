@@ -1,0 +1,113 @@
+.navContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    /* padding: 10px 50px; */
+    color: #00ADB5;
+    opacity: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    top: 0px;
+    height: 8vh;
+    width: 100vw;
+    background-color: #222831;
+    z-index: 50;
+}
+
+.navLeft{
+    padding: 10px 20px;
+    font-size: 2.5em;
+    opacity: 1;
+    transition: letter-spacing 0.3s ease ;
+}
+.rho{
+    font-size: 1.8em;
+    opacity: 1;
+    transition: letter-spacing 0.3s ease ;
+    z-index: 10;
+}
+
+.navLeft:hover{
+    
+    letter-spacing: 10px;
+}
+
+
+.navRight-Desktop{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+
+}
+.navRight-Mobile{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 5vh;
+  background: #222831;
+  color: #EEEEEE;
+  z-index: 0;
+}
+
+li{
+    padding: 5px 20px;
+    opacity: 1;
+    transition: letter-spacing 0.3s ease ;
+}
+
+li:hover{
+    letter-spacing: 6px;
+}
+
+.navText{
+    width: 100%;
+}
+
+
+
+.trigger {
+    position: absolute;
+    z-index: 2;
+    right: 0px;
+    top: 0px;
+}
+
+.bars {
+  width: 80px;
+  cursor: pointer;
+}
+.bars .line {
+  fill: none;
+  stroke: #EEEEEE;
+  stroke-width: 4;
+  stroke-linecap: square;
+  transition: stroke-dasharray 400ms,  stroke-dashoffset 400ms;
+}
+.bars .line.top {
+  stroke-dasharray: 40 172;
+}
+.bars .line.middle {
+  stroke-dasharray: 40 111;
+}
+.bars .line.bottom {
+  stroke-dasharray: 40 172;
+}
+.bars.active .top {
+  stroke-dashoffset: -132px;
+}
+.bars.active .middle {
+  stroke-dashoffset: -71px;
+}
+.bars.active .bottom {
+  stroke-dashoffset: -132px;
+}

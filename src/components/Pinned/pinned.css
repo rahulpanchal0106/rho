@@ -1,0 +1,38 @@
+.PinnedContainer {
+    background-color: #222831;
+    color: #EEEEEE;
+    padding: 20px;
+    border-radius: 8px;
+    top: 8vh;
+    position: relative;
+  }
+  
+  .repo {
+    margin-bottom: 20px;
+  }
+  
+  .repo h2 {
+    margin-bottom: 5px;
+  }
+  
+  .repo h2 a {
+    color: #00ADB5;
+    text-decoration: none;
+  }
+  
+  .repo h2 a:hover {
+    text-decoration: underline;
+  }
+  
+  .repo p {
+    margin: 0;
+  }
+  
+  .repo p:last-child {
+    margin-top: 5px;
+  }
+  
+  .loading {
+    color: #EEEEEE;
+  }
+  
