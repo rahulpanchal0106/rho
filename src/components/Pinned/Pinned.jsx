@@ -9,12 +9,12 @@ function Pinned() {
     let page = 1;
     const perPage = 100; // Maximum allowed per page by GitHub API
     const token = import.meta.env.VITE_GITHUB_TOKEN;
+    console.log(token)
     try {
       while (true) {
         const resp = await fetch(`https://api.github.com/user/repos?type=all&sort=updated&direction=desc&per_page=${perPage}&page=${page}`, {
           headers: {
             Authorization: `token ${token}`,
-            Accept: "application/vnd.github.v3+json"
           }
         });
 
