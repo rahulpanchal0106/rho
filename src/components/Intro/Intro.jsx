@@ -55,11 +55,11 @@ function Intro(){
 
                 alignItems: isMobile?"": "center"
             }}>I am <strong style={{
-                fontSize:"55px",
+                fontSize:"2.3em",
                 color:"#00ADB5",
                 padding:"0px",
                 marginLeft: isMobile?"0px":'7px'
-            }}> Rahul Panchal</strong> </h1>
+            }}> Rahul {isMobile?<br></br>:null} Panchal</strong> </h1>
             <h6 ref={addToRefs}>and...</h6>
             <h1 ref={addToRefs} style={{
                 flexDirection:isMobile?"column":'row',
