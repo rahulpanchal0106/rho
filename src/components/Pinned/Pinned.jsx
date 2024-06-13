@@ -3,12 +3,13 @@ import "./pinned.css";
 
 function Pinned() {
   const [data, setData] = useState(null);
+  const token = import.meta.env.VITE_GITHUB_TOKEN;
 
   async function getData() {
     try {
       const resp = await fetch(`https://api.github.com/user/repos?type=all&sort=created&direction=desc&per_page=100`, {
         headers: {
-          Authorization: `token `,
+          Authorization: `token ${token}`,
           Accept: "application/vnd.github.v3+json"
         },
       });
@@ -37,6 +38,7 @@ function Pinned() {
             <h2><a href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a></h2>
             <p>{repo.description}</p>
             <p>{repo.private ? "Private" : "Public"}</p>
+            <p>{repo.homepage? repo.homepage  : "No wbsite"}</p>
           </div>
         ))
       ) : (
