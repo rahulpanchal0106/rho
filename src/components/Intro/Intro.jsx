@@ -55,7 +55,7 @@ function Intro(){
 
                 alignItems: isMobile?"": "center"
             }}>I am <strong style={{
-                fontSize:"2.5em",
+                fontSize:"2.2em",
                 color:"#00ADB5",
                 padding:"0px",
                 marginLeft: isMobile?"0px":'7px'
@@ -63,7 +63,7 @@ function Intro(){
             <h6 ref={addToRefs}>and...</h6>
             <h1 ref={addToRefs} style={{
                 flexDirection:isMobile?"column":'row',
-
+                fontSize: "1.4em"
             }}>I like to 
                 <div className="liketo" style={{
                     position:isMobile?"relative":"absolute",
