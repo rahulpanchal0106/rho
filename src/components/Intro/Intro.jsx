@@ -55,7 +55,7 @@ function Intro(){
 
                 alignItems: isMobile?"": "center"
             }}>I am <strong style={{
-                fontSize:"75px",
+                fontSize:"65px",
                 color:"#00ADB5",
                 padding:"0px",
                 marginLeft: isMobile?"0px":'7px'
