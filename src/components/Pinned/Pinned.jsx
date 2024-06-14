@@ -33,13 +33,13 @@ function Pinned() {
   return (
     <div className="PinnedContainer">
       {data ? (
-        data.map((repo) => (
+        data.map((repo) => (repo.owner.login=="rahulpanchal0106"?
           <div key={repo.id} className="repo">
             <h2><a href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a></h2>
             <p>{repo.description}</p>
             <p>{repo.private ? "Private" : "Public"}</p>
             <p>{repo.homepage? repo.homepage  : "No wbsite"}</p>
-          </div>
+          </div>:""
         ))
       ) : (
         <p>Loading...</p>
