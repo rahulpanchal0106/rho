@@ -46,7 +46,7 @@ export default function AnimatedModel() {
     isPurrring?playAudio():pauseAudio();
   })
 
-  const audioRef = useRef(new Audio('/public/purrr.mp3'));
+  const audioRef = useRef(new Audio('/purrr.mp3'));
   const playAudio = () => {
     // setPurring(true);
     console.log("purring...")
