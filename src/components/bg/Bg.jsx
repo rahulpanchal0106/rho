@@ -61,7 +61,7 @@ export default function AnimatedModel() {
         
         <ambientLight intensity={2} />
         {/* <pointLight intensity={10} position={[10, 10, 10]} /> */}
-        <Model url="/public/willie.glb" />
+        <Model url="/willie.glb" />
         {/* <OrbitControls />
         <CameraLogger/> 
         <PerspectiveCamera/>  */}

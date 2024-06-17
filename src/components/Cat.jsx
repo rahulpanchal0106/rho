@@ -77,7 +77,7 @@ export default function AnimatedModel() {
         
         <ambientLight intensity={2} />
         {/* <pointLight intensity={10} position={[10, 10, 10]} /> */}
-        <Model url="/public/an_animated_cat.glb" />
+        <Model url="/an_animated_cat.glb" />
         {/* <OrbitControls />
         <CameraLogger/>  
          */}

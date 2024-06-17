@@ -5,6 +5,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Button } from 'material';
 // import VolumeMuteIcon from '@mui/icons-material/VolumeMuteIcon';
 import "./Bg.css"
+
 function Model({ url }) {
   const group = useRef();
   const { scene, animations } = useGLTF(url);
@@ -61,7 +62,7 @@ export default function AnimatedModel() {
         
         <ambientLight intensity={2} />
         {/* <pointLight intensity={10} position={[10, 10, 10]} /> */}
-        <Model url="/public/rhetorician.glb" />
+        <Model url="/rhetorician.glb" />
         {/* <OrbitControls />
         <CameraLogger/> 
         <PerspectiveCamera/>  */}
