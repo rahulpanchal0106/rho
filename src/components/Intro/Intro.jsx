@@ -89,8 +89,8 @@ function Intro(){
                     </div>
                 </h1>
             </div>
-            <div className="introRight">
-                <Cat/>
+            <div className="introRight" >
+                {window.screen.width<600?null:<Cat/>}
             </div>
         </div>
     )
