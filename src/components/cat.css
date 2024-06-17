@@ -1,0 +1,45 @@
+#cat-sound{
+    animation: fade-out 3s ease ;
+    opacity: 0;
+    margin: 0;
+    top: 99px;
+    
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 0.3em;
+    width: fit-content;
+
+}
+#no-sound{
+    animation: fade-out1 3s ease ;
+    opacity: 0;
+    margin: 0;
+    top: 99px;
+    
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 0.3em;
+    width: fit-content;
+}
+.cat-sound{
+    animation: fade-out 3s ease ;
+    opacity: 0;
+}
+
+@keyframes fade-out{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out1{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

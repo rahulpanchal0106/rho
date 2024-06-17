@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./pinned.css";
-
+import ProjectCard from "../projectsCards/ProjectCard";
+import Bg from "../bg/Bg"
 function Pinned() {
   const [data, setData] = useState(null);
   const token = import.meta.env.VITE_GITHUB_TOKEN;
@@ -32,18 +33,21 @@ function Pinned() {
 
   return (
     <div className="PinnedContainer">
+      
       {data ? (
         data.map((repo) => (repo.owner.login=="rahulpanchal0106"?
-          <div key={repo.id} className="repo">
-            <h2><a href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a></h2>
-            <p>{repo.description}</p>
-            <p>{repo.private ? "Private" : "Public"}</p>
-            <p>{repo.homepage? repo.homepage  : "No wbsite"}</p>
-          </div>:""
+          // <div key={repo.id} className="repo">
+          //   <h2><a href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a></h2>
+          //   <p>{repo.description}</p>
+          //   <p>{repo.private ? "Private" : "Public"}</p>
+          //   <p>{repo.homepage? repo.homepage  : "No wbsite"}</p>
+          // </div>:""
+          <ProjectCard name={repo.name} gh={repo.html_url} url={repo.homepage? repo.homepage  : null} about={repo.description}/>:""
         ))
       ) : (
         <p>Loading...</p>
       )}
+      <Bg/>
     </div>
   );
 }

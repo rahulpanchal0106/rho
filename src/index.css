@@ -6,8 +6,31 @@ body{
   justify-content: center;
   padding: 0px 10px;
   margin: 0px;
-  color: #EEEEEE
+  color: #EEEEEE;
+  overflow-x:hidden;
 }
 *{
   font-family: "red hat display";
+  scroll-behavior: smooth;
+}
+h1{
+  text-align: center;
+}
+
+.main-container{
+  font-size: 2.5em;
+  width: 80%;
+  height: 80vh;
+  color: white;
+  white-space:nowrap;
+  background-color: #393E46;
+  display: flex;
+  flex-direction: column;
+  top: 10vh;
+  
+  justify-content: space-evenly;
+  border-radius: 2em;
+  align-items: center;
+  margin-top: 10vh;
+  overflow-x: hidden;
 }

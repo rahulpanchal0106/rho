@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import "./intro.css"
 import { useEffect, useRef, useState } from "react";
+import Cat from "../Cat"
 function Intro(){
     const [isMobile, setIsMobile] = useState(false);
     const h1Refs = useRef([]);
@@ -44,7 +45,12 @@ function Intro(){
     
 
     return (
-        <div className="introContainer">
+        <div className="introContainer" id="introContainer" style={{
+            display:"flex",
+            flexDirection:isMobile?"column":"row",
+            width:isMobile?"100%":"80%",
+            height:isMobile?"90vh":"80vh"
+        }}>
             <div className="introLeft">
 
                 <h1 ref={addToRefs}>Hi,</h1>
@@ -84,10 +90,11 @@ function Intro(){
                 </h1>
             </div>
             <div className="introRight">
-                picture
+                <Cat/>
             </div>
         </div>
     )
 }
+import { Canvas } from "@react-three/fiber";
 
 export default Intro;
