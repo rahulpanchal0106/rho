@@ -47,7 +47,7 @@ function Pinned() {
       ) : (
         <p>Loading...</p>
       )}
-      <Bg/>
+      {/* <Bg/> */}
     </div>
   );
 }
