@@ -103,11 +103,26 @@ function Nav() {
           showSB?"flex":"none"
         :"flex",
       }}>
-        <li ref={addToRefs}><a href="#projects"><div className="navText">My Favourites</div></a></li>
-        <li ref={addToRefs}><a href="#skillsContainer"><div className="navText">Skills</div></a></li>
-        <li ref={addToRefs}><a href="#allmywork"><div className="navText">My Work</div></a></li>
-        <li ref={addToRefs}><a href="#cv"><div className="navText">My Resume</div></a></li>
-        <li ref={addToRefs}><a href="#contact"><div className="navText">Contact Me</div></a></li>
+        <li ref={addToRefs}><a onClick={()=>{
+            setShowSB(!showSB);
+            animate();
+          }} href="#projects"><div className="navText">My Favourites</div></a></li>
+        <li ref={addToRefs}><a onClick={()=>{
+            setShowSB(!showSB);
+            animate();
+          }} href="#skillsContainer"><div className="navText">Skills</div></a></li>
+        <li ref={addToRefs}><a onClick={()=>{
+            setShowSB(!showSB);
+            animate();
+          }} href="#allmywork"><div className="navText">My Work</div></a></li>
+        <li ref={addToRefs}><a onClick={()=>{
+            setShowSB(!showSB);
+            animate();
+          }} href="#cv"><div className="navText">My Resume</div></a></li>
+        <li ref={addToRefs}><a onClick={()=>{
+            setShowSB(!showSB);
+            animate();
+          }} href="#contact"><div className="navText">Contact Me</div></a></li>
         {/* <li><button onClick={playAudio}>Play</button></li>
         <li><button onClick={pauseAudio}>Pause</button></li> */}
       </ul>
