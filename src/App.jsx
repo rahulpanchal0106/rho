@@ -42,13 +42,13 @@ const App = () => {
         <Projects />
         <h1 id="skillsContainer">I've learned some tech and beyond,</h1>
         <Skills />
-        <h1 id="allmywork">Using the tech, I've worked on a lot of stuff</h1>
+        <h1 id="allmywork">Using the tech, I've worked on a lot of good stuff</h1>
         <Pinned />
-        <h1 id="cv">And here I am, Looking for a job </h1>
+        <h1 id="cv">Here I am, Looking For a Job </h1>
         <Resume/>
         <h1 id="contact">Did you like it? Tell me about your experience here,</h1>
         <ContactForm/>
-        <h1>May be you want to connect with me...</h1>
+        <h1>And if you want to connect with me...</h1>
         <SocialMediaLinks/>
     </div>
   );
