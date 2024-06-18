@@ -9,6 +9,7 @@ import Skills from "./components/Skills/Skills";
 import Loading from "./components/Loading/Loading";
 import Resume from "./components/Resume/Resume";
 import ContactForm from "./components/Contact/Contact";
+import SocialMediaLinks from "./components/Socials/Socials";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,6 +48,8 @@ const App = () => {
         <Resume/>
         <h1 id="contact">Did you like it? Tell me about your experience here,</h1>
         <ContactForm/>
+        <h1>May be you want to connect with me...</h1>
+        <SocialMediaLinks/>
     </div>
   );
 };

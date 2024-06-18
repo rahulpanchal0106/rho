@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +11,6 @@ const ContactForm = () => {
   const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
-
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -23,17 +21,35 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const dataArray = {
-      formData
-  };
+    const data = {
+      name: formData.name,
+      email: formData.email,
+      mobile: formData.mobile,
+      message: formData.message,
+    };
 
     try {
-        console.log(formData)
-      const response = await axios.post('https://sheet.best/api/sheets/35fcf16d-1642-4346-b722-d77e96811920', formData);
-      console.log(response);
-      setFormData({ name: '', email: '', mobile: '', message: '' });
-      setError(null);
-      setSuccess(true);
+      const response = await fetch('https://sheet.best/api/sheets/35fcf16d-1642-4346-b722-d77e96811920', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log(result);
+        setFormData({ name: '', email: '', mobile: '', message: '' });
+        setError(null);
+        setSuccess(true);
+      } else {
+        const errorData = await response.json();
+        console.error('Error response:', errorData);
+        setError(`Failed to submit form: ${response.status} ${errorData.message}`);
+        setSuccess(false);
+      }
     } catch (err) {
       console.error('Error:', err);
       setError('Failed to submit form. Please try again.');
