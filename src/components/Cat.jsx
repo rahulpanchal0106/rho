@@ -19,7 +19,7 @@ function Model({ url }) {
   }, [actions]);
   
 
-  return <primitive  ref={group} object={scene} position={[0,-1,0]} />;
+  return <primitive  ref={group} object={scene} position={[0,-8,0]} />;
 }
 
 
@@ -69,8 +69,8 @@ export default function AnimatedModel() {
     }}>
       
       <Canvas camera={{
-        position: [19,36,-36], // Set initial camera position (x, y, z)
-        fov: 30, // Field of view
+        position: [19,10,-36], // Set initial camera position (x, y, z)
+        fov: 29, // Field of view
       }} onClick={()=>setPurring(!isPurrring)}>
         {/* {isPurrring?<VolumeMuteIcon/>:<VolumeMuteIcon/>} */}
         

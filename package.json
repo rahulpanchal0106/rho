@@ -16,13 +16,16 @@
     "@mui/material": "^5.15.20",
     "@react-three/drei": "^9.107.0",
     "@react-three/fiber": "^8.16.8",
+    "axios": "^1.7.2",
     "drei": "^2.2.21",
+    "emailjs-com": "^3.2.0",
     "gltfjsx": "^6.2.18",
     "gsap": "^3.12.5",
     "material": "^0.9.11",
     "mui": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-toastify": "^10.0.5",
     "three": "^0.165.0"
   },
   "devDependencies": {

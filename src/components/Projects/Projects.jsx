@@ -14,7 +14,7 @@ function Projects(){
             <div className="alot" style={{
                 position:"absolute",
                 right: window.screen.width<500?"-220px":"-140px",
-                top:window.screen.width<500?"480vh":"360vh",
+                top:window.screen.width<500?"580vh":"360vh",
                 transform:"rotate(90deg)",
                 letterSpacing:"20px"
             }}>
