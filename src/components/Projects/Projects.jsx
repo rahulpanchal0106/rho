@@ -5,7 +5,7 @@ import PinnedProjectCard from "../projectsCards/PinnedProjectCard";
 function Projects(){
     return(
         <div className="projects" id="projects">
-            <PinnedProjectCard tech={["mongodb","expressjs","reactjs","nodejs","css","tailwind","vite"]} name="Foxus AI" url="https://foxus-ai.onrender.com" about="We made this app to enhance the learning experience with AI and LLMs." subtitle="AI Generated Focused Learning Sessions" image="/p3.jpg" />
+            <PinnedProjectCard tech={["mongodb","expressjs","reactjs","nodejs","css","tailwind","vite","prisma"]} name="Foxus AI" url="https://foxus-ai.onrender.com" about="We made this app to enhance the learning experience with AI and LLMs." subtitle="AI Generated Focused Learning Sessions" image="/p3.jpg" />
             <PinnedProjectCard tech={["mongodb","expressjs","reactjs","nodejs","css","tailwind","vite"]} name="Socio" url="https://socio-alpha.vercel.app" about="Wanted to make my own social media app having AI capabilities." image="/p7.png" />
             <PinnedProjectCard tech={["mongodb","expressjs","reactjs","nodejs","css","tailwind","vite"]} name="BlogApp" url="https://blogapp01.vercel.app" about="Made a blog management system under 48hrs, with zero errors." image="/p8.png" />
             <PinnedProjectCard tech={["threejs","webpack","html","css","js","blender"]} name="Monkee" url="https://monkee.onrender.com" about="My first Three.js website, I made this piece to test my Three.js skills." subtitle="A 3D Landing Page Concept" image="/p5.jpg" />
