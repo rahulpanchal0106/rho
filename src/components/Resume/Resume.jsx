@@ -1,8 +1,7 @@
-
 function Resume(){
     return (
     <div style={{ margin: '20px' }}>
-      <a href="/my_cv.pdf" download="my-cv.pdf">
+      <a href="https://drive.google.com/file/d/1wr0F5XlFD90Hy_5ogKlIFAhZZ7UjnwYr/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
         <button style={{
           padding: '10px 20px',
           fontSize: '16px',
@@ -12,7 +11,7 @@ function Resume(){
           border: 'none',
           borderRadius: '5px'
         }}>
-          Download My CV
+          View/Download My Resume
         </button>
       </a>
     </div>

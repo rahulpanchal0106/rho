@@ -7,8 +7,6 @@ const ContactForm = () => {
     mobile: '',
     message: ''
   });
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,43 +16,17 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    const { name, email, mobile, message } = formData;
 
-    const data = {
-      name: formData.name,
-      email: formData.email,
-      mobile: formData.mobile,
-      message: formData.message,
-    };
+    // Create the mailto link
+    const mailtoLink = `mailto:rm5901960@gmail.com?subject=Saw your portfolio&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}`
+    )}`;
 
-    try {
-      const response = await fetch('https://sheet.best/api/sheets/35fcf16d-1642-4346-b722-d77e96811920', {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        const result = await response.json();
-        console.log(result);
-        setFormData({ name: '', email: '', mobile: '', message: '' });
-        setError(null);
-        setSuccess(true);
-      } else {
-        const errorData = await response.json();
-        console.error('Error response:', errorData);
-        setError(`Failed to submit form: ${response.status} ${errorData.message}`);
-        setSuccess(false);
-      }
-    } catch (err) {
-      console.error('Error:', err);
-      setError('Failed to submit form. Please try again.');
-      setSuccess(false);
-    }
+    // Open the mailto link in the user's email client
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -107,8 +79,6 @@ const ContactForm = () => {
         ></textarea>
       </div>
       <button type="submit" style={buttonStyle}>Send</button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {success && <p style={{ color: 'green' }}>Form submitted successfully!</p>}
     </form>
   );
 };

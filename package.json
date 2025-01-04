@@ -21,7 +21,7 @@
     "@react-three/drei": "^9.107.0",
     "@react-three/fiber": "^8.16.8",
     "axios": "^1.7.2",
-    "drei": "^2.2.21",
+    "drei": "^0.0.45",
     "emailjs-com": "^3.2.0",
     "gltfjsx": "^6.2.18",
     "gsap": "^3.12.5",
